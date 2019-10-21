@@ -81,16 +81,7 @@ li {
 .warbonnets {
   width: 100%;
   position: relative;
-  height: 60px;
-}
-
-.warbonnets:before {
-  content: '';
-  position: absolute;
-  height: 0px;
-  width: 0px;
-  border-top: solid 60px #111111;
-  border-right: solid 60px transparent;
+  height: 80px;
 }
 
 .content {
