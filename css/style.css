@@ -39,6 +39,64 @@ li {
   overflow: hidden;
 }
 
+.navbar {
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 30px;
+}
+
+.navbar .brand-container {
+  position: relative;
+  width: 40px;
+  height: 70px;
+  margin: 0;
+}
+
+.navbar .brand-container .brand-frame {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.navbar .brand-container .brand-frame .brand-img {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.navbar .brand-container .brand-line {
+  position: relative;
+  margin: 0 auto;
+}
+
+.navbar .hmbr-container {
+  width: 40px;
+  height: 40px;
+  margin: 15px 0;
+}
+
+.navbar .hmbr-container .hmbr-frame {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.jumbotron {
+  height: 65vh;
+  width: 100%;
+  position: relative;
+  padding-top: calc(35% + 5vh);
+}
+
 /*Pages*/
 /*1*/
 /*2*/

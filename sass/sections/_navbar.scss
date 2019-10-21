@@ -1,0 +1,51 @@
+.navbar {
+	position: absolute;
+	height: 70px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 0 30px;
+
+	.brand-container {
+		position: relative;
+		width: 40px;
+		height: 70px;
+		margin: 0;
+		//padding-top: 30px;
+
+		.brand-frame {
+			position: relative;
+			margin: 0 auto;
+			border-radius: $pwsj-border-radius;
+			-webkit-border-radius: $pwsj-border-radius;
+			-moz-border-radius: $pwsj-border-radius;
+			-ms-border-radius: $pwsj-border-radius;
+			-o-border-radius: $pwsj-border-radius;
+
+			.brand-img {
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+		}
+
+		.brand-line {
+			position: relative;
+			margin: 0 auto;
+		}
+	}
+
+	.hmbr-container {
+		width: 40px;
+		height: 40px;
+		margin: 15px 0;
+
+		.hmbr-frame {
+			border-radius: $pwsj-border-radius;
+			-webkit-border-radius: $pwsj-border-radius;
+			-moz-border-radius: $pwsj-border-radius;
+			-ms-border-radius: $pwsj-border-radius;
+			-o-border-radius: $pwsj-border-radius;
+		}
+	}
+}
