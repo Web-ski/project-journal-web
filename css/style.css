@@ -132,6 +132,8 @@ li {
   -o-border-radius: 3px;
 }
 
+/*Pages*/
+/*1*/
 .jumbotron {
   height: 65vh;
   width: 100%;
@@ -139,8 +141,10 @@ li {
   padding-top: calc(35% + 5vh);
 }
 
-/*Pages*/
-/*1*/
+.crossroad {
+  height: 35vh;
+}
+
 /*2*/
 /*3*/
 /*# sourceMappingURL=style.css.map */
