@@ -75,13 +75,13 @@ li {
 .article__text {
   color: #111111;
   font-family: "Calibri", sans-serif;
-  line-height: 140%;
+  line-height: 150%;
 }
 
 .warbonnets {
   width: 100%;
   position: relative;
-  height: 40px;
+  height: 60px;
 }
 
 .warbonnets:before {
@@ -89,8 +89,12 @@ li {
   position: absolute;
   height: 0px;
   width: 0px;
-  border-top: solid 40px #111111;
-  border-right: solid 40px transparent;
+  border-top: solid 60px #111111;
+  border-right: solid 60px transparent;
+}
+
+.content {
+  padding: 15px;
 }
 
 /* Sections */
