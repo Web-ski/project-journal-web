@@ -1,0 +1,12 @@
+.button-go {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: $pwsj-white-color;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $pwsj-blue-color;
+    }
+}

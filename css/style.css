@@ -30,6 +30,48 @@ li {
   position: relative;
 }
 
+.button-container {
+  height: 30%;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button-container .button-line {
+  float: left;
+  height: 4px;
+  background-color: #297cf1;
+}
+
+.button-container .button-frame {
+  height: 4px;
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+.button-container .button-frame button {
+  display: none;
+}
+
+.button-go {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+
+.button-go:hover {
+  background-color: #297cf1;
+}
+
 /* Sections */
 .main {
   background-color: #111111;

@@ -1,0 +1,24 @@
+.button-container {
+	height: 30%;
+	width: 100%;
+	padding: 8px 0;
+	font-size: 0;
+	display: flex;
+	align-items: center;
+
+	.button-line {
+		float: left;
+		height: 4px;
+		background-color: $pwsj-blue-color;
+	}
+
+	.button-frame {
+		height: 4px;
+		background-color: transparent;
+		border-radius: $pwsj-border-radius;
+
+		button {
+			display: none;
+		}
+	}
+}
