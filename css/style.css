@@ -23,6 +23,13 @@ li {
 }
 
 /* Components */
+.page-title {
+  font-family: "Arial Nova", sans-serif;
+  font-size: calc(22px + 2vw);
+  text-transform: uppercase;
+  position: relative;
+}
+
 /* Sections */
 /*Pages*/
 /*1*/
