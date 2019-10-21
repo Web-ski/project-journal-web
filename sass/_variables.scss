@@ -1,0 +1,29 @@
+/*Colors*/
+$pwsj-map-color: #204A87;
+$pwsj-blue-color: #297cf1;
+$pwsj-black-color: #111111;
+$pwsj-white-color: #FFFFFF;
+$pwsj-prgraph-color: #111111;
+
+/*Fonts*/
+$pwsj-prgraph-font: 'Calibri',
+sans-serif;
+$pwsj-btn-font: 'Calibri',
+sans-serif;
+$pwsj-title-font: 'Arial Nova',
+sans-serif;
+
+/*Border*/
+$pwsj-border-radius: 3px;
+
+/*Extends*/
+
+@mixin pwsj-btn-text {
+    font-family: $pwsj-btn-font;
+    text-transform: uppercase;
+}
+
+@mixin pwsj-dark-theme {
+    background-color: $pwsj-black-color;
+    color: $pwsj-white-color;
+}
