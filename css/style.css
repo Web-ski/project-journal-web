@@ -31,6 +31,14 @@ li {
 }
 
 /* Sections */
+.main {
+  background-color: #111111;
+  color: #FFFFFF;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
 /*Pages*/
 /*1*/
 /*2*/
