@@ -1,0 +1,14 @@
+.warbonnets {
+    width: 100%;
+    position: relative;
+    height: 40px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        border-top: solid 40px $pwsj-black-color;
+        border-right: solid 40px transparent;
+    }
+}

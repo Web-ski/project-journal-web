@@ -78,6 +78,21 @@ li {
   line-height: 140%;
 }
 
+.warbonnets {
+  width: 100%;
+  position: relative;
+  height: 40px;
+}
+
+.warbonnets:before {
+  content: '';
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  border-top: solid 40px #111111;
+  border-right: solid 40px transparent;
+}
+
 /* Sections */
 .main {
   background-color: #111111;
