@@ -138,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 			frame.style.marginTop = '29px';
 
 			setTimeout(function () {
-				console.log(elem3);
 				elem3.style.backgroundColor = $pwsjBlueColor;
 				elem3.style.height = '4px';
 				elem3.style.width = '100%';
@@ -152,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 				};
 
 				setTimeout(function () {
-					console.log(elem2);
 					elem2.style.backgroundColor = $pwsjBlueColor;
 					elem2.style.height = '4px';
 					elem2.style.width = '100%';
@@ -166,7 +164,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 					};
 
 					setTimeout(function () {
-						console.log(elem1);
 						elem1.style.backgroundColor = $pwsjBlueColor;
 						elem1.style.height = '4px';
 						elem1.style.width = '100%';
