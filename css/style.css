@@ -72,6 +72,12 @@ li {
   background-color: #297cf1;
 }
 
+.article__text {
+  color: #111111;
+  font-family: "Calibri", sans-serif;
+  line-height: 140%;
+}
+
 /* Sections */
 .main {
   background-color: #111111;
