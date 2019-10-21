@@ -5,6 +5,8 @@
 	top: 0;
 	left: 0;
 	padding: 0 30px;
+	display: flex;
+	justify-content: space-between;
 
 	.brand-container {
 		position: relative;
@@ -36,16 +38,22 @@
 	}
 
 	.hmbr-container {
-		width: 40px;
-		height: 40px;
-		margin: 15px 0;
+		@extend .brand-container;
 
 		.hmbr-frame {
+			position: relative;
+			margin: 0 auto;
 			border-radius: $pwsj-border-radius;
 			-webkit-border-radius: $pwsj-border-radius;
 			-moz-border-radius: $pwsj-border-radius;
 			-ms-border-radius: $pwsj-border-radius;
 			-o-border-radius: $pwsj-border-radius;
+
+			.hmbr-elem1,
+			.hmbr-elem2,
+			.hmbr-elem3 {
+				position: absolute;
+			}
 		}
 	}
 }

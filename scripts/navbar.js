@@ -8,10 +8,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 		const addLineToBrand = document.createElement('div');
 		const addBrandFrame = document.createElement('div');
-		const addBrandImg = document.createElement('img');
+		const addBrandImg = document.createElement('div');
 
 		//const addLineToHmbr = document.createElement('div');
 		const addHmbrFrame = document.createElement('div');
+		const addHmbrElem1 = document.createElement('div');
+		const addHmbrElem2 = document.createElement('div');
+		const addHmbrElem3 = document.createElement('div');
 
 		navbar.appendChild(addBrandContainer);
 		navbar.appendChild(addHmbrContainer);
@@ -24,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		navbar.lastElementChild.appendChild(addHmbrFrame);
 
 		navbar.firstElementChild.children[1].appendChild(addBrandImg);
+		navbar.lastElementChild.children[0].appendChild(addHmbrElem1);
+		navbar.lastElementChild.children[0].appendChild(addHmbrElem2);
+		navbar.lastElementChild.children[0].appendChild(addHmbrElem3);
 	}
 
 	const movingBrand = function () {
@@ -72,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		const runFrame = function (frame) {
 			frame.style.width = '0';
 			frame.style.height = '40px';
+			frame.style.borderRadius = '50%';
 			//frame.style.margin = '30px auto';
 
 			setTimeout(function () {
@@ -88,7 +95,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 		const runImg = function (img) {
 			setTimeout(function () {
-				img.setAttribute('src', '../images/group.svg');
+				img.style.backgroundImage = 'url("images/group.svg")';
+				img.style.backgroundRepeat = 'no-repeat';
+				img.style.backgroundSize = 'cover';
 				img.style.opacity = '0';
 				img.style.width = '40px';
 				img.style.height = '40px';
@@ -116,6 +125,68 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		console.log(hmbrContainer);
 		hmbrContainer.firstChild.setAttribute('class', 'hmbr-frame');
 
+		const hmbrFrame = document.getElementsByClassName('hmbr-frame')[0];
+		hmbrFrame.children[0].setAttribute('class', 'hmbr-elem1');
+		hmbrFrame.children[1].setAttribute('class', 'hmbr-elem2');
+		hmbrFrame.children[2].setAttribute('class', 'hmbr-elem3');
+		const hmbrElem1 = document.getElementsByClassName('hmbr-elem1')[0];
+		const hmbrElem2 = document.getElementsByClassName('hmbr-elem2')[0];
+		const hmbrElem3 = document.getElementsByClassName('hmbr-elem3')[0];
+
+		const runElems = function (elem1, elem2, elem3, frame) {
+			frame.style.height = '40px';
+			frame.style.marginTop = '29px';
+
+			setTimeout(function () {
+				console.log(elem3);
+				elem3.style.backgroundColor = $pwsjBlueColor;
+				elem3.style.height = '4px';
+				elem3.style.width = '100%';
+				elem3.style.top = '0';
+				elem3.style.left = '0';
+
+				for (let i = 0; i < 34; i++) {
+					setTimeout(function () {
+						elem3.style.top = i + 'px';
+					}, i * 8);
+				};
+
+				setTimeout(function () {
+					console.log(elem2);
+					elem2.style.backgroundColor = $pwsjBlueColor;
+					elem2.style.height = '4px';
+					elem2.style.width = '100%';
+					elem2.style.top = '0';
+					elem2.style.left = '0';
+
+					for (let i = 0; i < 18; i++) {
+						setTimeout(function () {
+							elem2.style.top = i + 'px';
+						}, i * 8);
+					};
+
+					setTimeout(function () {
+						console.log(elem1);
+						elem1.style.backgroundColor = $pwsjBlueColor;
+						elem1.style.height = '4px';
+						elem1.style.width = '100%';
+						elem1.style.top = '0';
+						elem1.style.left = '0';
+	
+						for (let i = 0; i < 2; i++) {
+							setTimeout(function () {
+								elem1.style.top = i + 'px';
+							}, i * 8);
+						};
+	
+					}, 300);
+
+				}, 300);
+
+			}, 300);
+		}
+
+		runElems(hmbrElem1, hmbrElem2, hmbrElem3, hmbrFrame);
 	}
 
 	createElementsNavbar();

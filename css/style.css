@@ -88,16 +88,22 @@ li {
   top: 0;
   left: 0;
   padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.navbar .brand-container {
+.navbar .brand-container, .navbar .hmbr-container {
   position: relative;
   width: 40px;
   height: 70px;
   margin: 0;
 }
 
-.navbar .brand-container .brand-frame {
+.navbar .brand-container .brand-frame, .navbar .hmbr-container .brand-frame {
   position: relative;
   margin: 0 auto;
   border-radius: 3px;
@@ -107,29 +113,31 @@ li {
   -o-border-radius: 3px;
 }
 
-.navbar .brand-container .brand-frame .brand-img {
+.navbar .brand-container .brand-frame .brand-img, .navbar .hmbr-container .brand-frame .brand-img {
   width: 40px;
   height: 40px;
   margin: 0 auto;
 }
 
-.navbar .brand-container .brand-line {
+.navbar .brand-container .brand-line, .navbar .hmbr-container .brand-line {
   position: relative;
   margin: 0 auto;
-}
-
-.navbar .hmbr-container {
-  width: 40px;
-  height: 40px;
-  margin: 15px 0;
 }
 
 .navbar .hmbr-container .hmbr-frame {
+  position: relative;
+  margin: 0 auto;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+}
+
+.navbar .hmbr-container .hmbr-frame .hmbr-elem1,
+.navbar .hmbr-container .hmbr-frame .hmbr-elem2,
+.navbar .hmbr-container .hmbr-frame .hmbr-elem3 {
+  position: absolute;
 }
 
 /*Pages*/
