@@ -23,14 +23,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         const sectionTitle = movingContainer.firstElementChild;
         sectionTitle.setAttribute('class', 'section-title');
-
     }
 
     const moveTitle = function () {
         const titleContainer = document.getElementsByClassName('title-container')[0];
         const title = document.getElementsByClassName('section-title')[0];
         //titleContainer.style.borderRadius = '0 0 3px 3px';
-        titleContainer.style.padding = '0 15px';
+        titleContainer.style.padding = '15px 15px 0';
         titleContainer.style.color = $pwsjBlueColor;
         titleContainer.style.overflow = 'hidden';
         titleContainer.style.textAlign = 'left';
@@ -49,14 +48,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
         runContainer(titleContainer);
     }
 
-    function scrollSite() {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            moveTitle();
-        };
-    }
+    const scrollSite = function () {
+        window.addEventListener("scroll", function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                moveTitle();
+            };
+        });
+    };
 
     createElements();
-    window.onscroll = function () {
-        scrollSite()
-    };
+    scrollSite();
 });
