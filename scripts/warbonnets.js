@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
         const topSeparator = warbonnets.firstElementChild;
         const movingContainer = warbonnets.lastElementChild;
         movingContainer.setAttribute('class', 'title-container');
-        
+
         topSeparator.style.width = '100%';
         topSeparator.style.height = '20px';
         topSeparator.style.backgroundColor = $pwsjBlackColor;
-        
+
         console.log(topSeparator);
 
         movingContainer.style.height = '60px';
@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     const moveTitle = function () {
         const titleContainer = document.getElementsByClassName('title-container')[0];
-        titleContainer.style.borderRadius = '0 0 10px 0';  
-        //titleContainer.style.borderBottom = 'solid 3px' + $pwsjBlueColor;      
+        titleContainer.style.borderRadius = '0 0 10px 0';
+        //titleContainer.style.borderBottom = 'solid 3px' + $pwsjBlueColor;
 
         const runContainer = function(container) {
             setTimeout(function () {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 for (let i = 0; i < 160; i++) {
 
 					setTimeout(function () {
-                        container.style.width = i + 'px';                        
+                        container.style.width = i + 'px';
 					}, i * 5);
 				};
             }, 300)
