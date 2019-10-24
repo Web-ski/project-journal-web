@@ -15,13 +15,18 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		setTimeout(function () {
 			text.style.animation = 'textSlider 1s ease-in';
 			text.style.opacity = '1';
-		}, 300*number)
+		}, 300 * number)
 	};
 
 	const scrollText1 = function () {
 		window.addEventListener("scroll", function () {
 			if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
 				moveText(text1, 2);
+			} else {
+				console.log(text1.getAttribute('style').valueOf('animation'));
+				text1.style.animation = 'textUnslider';
+				text1.style.opacity = '0';
+
 			};
 		});
 	};
@@ -30,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		window.addEventListener("scroll", function () {
 			if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
 				moveText(text2, 3);
+			} else {
+				console.log(text1.getAttribute('style').valueOf('animation'));
+				text2.style.animation = 'textUnslider';
+				text2.style.opacity = '0';
 			};
 		});
 	};

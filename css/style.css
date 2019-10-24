@@ -216,6 +216,24 @@ li {
   }
 }
 
+@-webkit-keyframes textUnslider {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes textUnslider {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /*2*/
 /*3*/
 /*# sourceMappingURL=style.css.map */

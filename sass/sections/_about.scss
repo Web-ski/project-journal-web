@@ -1,15 +1,26 @@
 #about {
-    background-color: $pwsj-white-color;
-    font-size: 0;
+	background-color: $pwsj-white-color;
+	font-size: 0;
 
-    .content {
-        @keyframes textSlider {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    }
+	.content {
+		@keyframes textSlider {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes textUnslider {
+			0% {
+				opacity: 1;
+			}
+
+			100% {
+				opacity: 0;
+			}
+		}
+	}
 }
