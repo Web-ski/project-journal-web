@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		const hmbrContainer = document.getElementsByClassName('hmbr-container')[0];
 
 		//hmbrContainer.firstChild.setAttribute('class', 'hmbr-line');
-		console.log(hmbrContainer);
+		//console.log(hmbrContainer);
 		hmbrContainer.firstChild.setAttribute('class', 'hmbr-frame');
 
 		const hmbrFrame = document.getElementsByClassName('hmbr-frame')[0];

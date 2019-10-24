@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		const pageTitlePart4 = 'Science';
 		const pageTitlePart5 = 'Journal';
 
-		console.log(pageTitleAll);
+		//console.log(pageTitleAll);
 		const time = [pageTitlePart1.length, pageTitlePart2.length, pageTitlePart3.length, pageTitlePart4.length];
 
 		const pulse = function () {
