@@ -40,14 +40,21 @@ document.addEventListener('DOMContentLoaded', function (event) {
     const addBoxElements = function() {
         const boxes = teamContent.getElementsByClassName('item__box');
         console.log(boxes);
+        const boxArray = [];
+        console.log(boxArray);
 
         [].forEach.call(boxes, function (item) {
+            boxArray.push(item); 
+        });
+
+        const boxStyling = function(item) {
             item.style.width = '100%';
             item.style.minHeight = '100px';
             item.style.marginTop = '15px';
             item.style.backgroundColor = $pwsjWhiteColor;
-            console.log(item);
-		});
+        }
+        
+        boxArray.forEach(boxStyling);
     }
     
     teamArray.forEach(createBox);
