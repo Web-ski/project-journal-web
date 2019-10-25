@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 
+	const $pwsjBlueColor = '#297cf1';
+	const $pwsjBlackColor = '#111111';
+
 	const aboutContent = document.getElementsByClassName('content')[0];
 	const text1 = aboutContent.firstElementChild;
 	const text2 = aboutContent.children[1];
@@ -14,16 +17,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		img.style.height = '100px';
 		img.style.display = 'block';
 		img.style.margin = '0 auto';
-		img.style.border = 'solid 10px #297cf1';
+		img.style.border = 'solid 10px' + $pwsjBlueColor;
 		img.style.borderRadius = '50%';
-		img.style.backgroundColor = '#111111';
+		img.style.backgroundColor = $pwsjBlackColor;
 		title.style.color = '#919191';
 		title.style.paddingTop = '15px';
 
 		[].forEach.call(contElemsArr, function (item) {
 			item.style.opacity = "0";
 			item.style.marginBottom = "15px";
-			console.log(item);
 		});
 	}
 
