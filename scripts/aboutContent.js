@@ -3,16 +3,22 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	const aboutContent = document.getElementsByClassName('content')[0];
 	const text1 = aboutContent.firstElementChild;
 	const text2 = aboutContent.children[1];
-	const img = aboutContent.children[2];
-	const text3 = aboutContent.children[3];
-	const text4 = aboutContent.children[4];
-	const text5 = aboutContent.children[5];
+	const title = aboutContent.children[2];
+	const img = aboutContent.children[3];
+	const text3 = aboutContent.children[4];
+	const text4 = aboutContent.children[5];
+	const text5 = aboutContent.children[6];
 
 	const stylingTexts = function () {
 		const contElemsArr = aboutContent.children;
 		img.style.height = '100px';
 		img.style.display = 'block';
 		img.style.margin = '0 auto';
+		img.style.border = 'solid 10px #297cf1';
+		img.style.borderRadius = '50%';
+		img.style.backgroundColor = '#111111';
+		title.style.color = '#919191';
+		title.style.paddingTop = '15px';
 
 		[].forEach.call(contElemsArr, function (item) {
 			item.style.opacity = "0";
@@ -39,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	stylingTexts();
 	scrollText(text1, 100, 1);
 	scrollText(text2, 200, 2);
+	scrollText(title, 300, 2);
 	scrollText(img, 300, 2);
 	scrollText(text3, 400, 2);
 	scrollText(text4, 400, 2.1);

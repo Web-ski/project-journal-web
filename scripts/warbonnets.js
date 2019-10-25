@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		topSeparator.style.backgroundColor = $pwsjBlackColor;
 
 		const sectionTitle = movingContainer.firstElementChild;
-		sectionTitle.setAttribute('class', 'section-title');
+		sectionTitle.setAttribute('class', 'section__title');
 	}
 
 	const moveTitle = function () {
 		const titleContainer = document.getElementsByClassName('title-container')[0];
-		const title = document.getElementsByClassName('section-title')[0];
+		const title = document.getElementsByClassName('section__title')[0];
 		//titleContainer.style.borderRadius = '0 0 3px 3px';
 		titleContainer.style.padding = '15px 25px 0';
 		titleContainer.style.color = $pwsjBlueColor;

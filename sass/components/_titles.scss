@@ -5,7 +5,12 @@
     position: relative;
 }
 
-.section-title {
+.section__title {
     font-family: $pwsj-title-font;
     font-size: 22px;    
+}
+
+.article__title {
+    font-family: $pwsj-title-font;
+    font-size: 18px;
 }

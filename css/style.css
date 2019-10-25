@@ -30,9 +30,14 @@ li {
   position: relative;
 }
 
-.section-title {
+.section__title {
   font-family: "Arial Nova", sans-serif;
   font-size: 22px;
+}
+
+.article__title {
+  font-family: "Arial Nova", sans-serif;
+  font-size: 18px;
 }
 
 .button-container {
