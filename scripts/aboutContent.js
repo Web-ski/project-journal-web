@@ -28,19 +28,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		}, 200 * time);
 	};
 
-	const removeText = function (text) {
-		setTimeout(function () {
-			text.style.animation = 'textUnslider';
-			text.style.opacity = '0';
-		}, 100);
-	}
-
 	const scrollText = (text, number, time) => {
 		window.addEventListener("scroll", function () {
-			if (document.body.scrollTop > (200 + number) || document.documentElement.scrollTop > (200 + number)) {
+			if (document.body.scrollTop > (100 + number) || document.documentElement.scrollTop > (100 + number)) {
 				moveText(text, time);
-			} else {
-				removeText(text);
 			};
 		});
 	}
