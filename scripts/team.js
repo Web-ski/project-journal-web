@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     const teamContent = document.getElementsByClassName('content')[1];
 
     const $pwsjWhiteColor = '#FFFFFF';
+    const $pwsjBlueColor = '#297cf1';
 
     const description = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ullam. Itaque assumenda vel repudiandae corporis, eveniet qui facilis maxime consectetur eius non at eum libero quisquam delectus illum nisi dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic, sapiente similique fugiat exercitationem soluta dolorem labore tempora molestiae at a maiores commodi doloribus fugit eligendi debitis quibusdam cum quidem.';
 
@@ -61,8 +62,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
             item.style.width = '100%';
             item.style.minHeight = '100px';
             item.style.marginTop = '15px';
-            item.style.backgroundColor = $pwsjWhiteColor;
-            item.style.padding = '10px';
+            item.style.backgroundColor = $pwsjBlueColor;
+            item.style.border = 'solid 4px' + $pwsjBlueColor;
+            item.style.padding = '15px';
+            item.style.borderRadius = '3px';
         }
 
         const createItems = function(item) {
@@ -88,18 +91,32 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         const fillItems = function(item) {
             const itemIndex = boxArray.indexOf(item);
+            const allItems = item.children;
 
             const image = item.getElementsByClassName('article__image')[0];
             const imageSrc = teamArray[itemIndex].image;
             image.setAttribute('src', imageSrc);
-            image.style.height = '100px';
-            image.style.display = 'flex';
 
             const prgrph = item.getElementsByClassName('item__text');
             prgrph[0].textContent = teamArray[itemIndex].name;
             prgrph[1].textContent = teamArray[itemIndex].univ;
             prgrph[2].textContent = teamArray[itemIndex].email;
             prgrph[3].textContent = teamArray[itemIndex].descript;
+
+            image.style.height = '100px';
+            image.style.borderRadius = '50%';
+            image.style.border = 'solid 10px' + $pwsjWhiteColor;
+            image.style.display = 'flex';
+
+           //prgrph[0].style.fontWeight = 'bold';
+            prgrph[0].style.fontSize = '22px';
+            prgrph[1].style.fontSize = '18px';
+
+            [].forEach.call(allItems, function (item) {
+                console.log(item);
+                item.style.margin = '10px auto';
+                item.style.color = $pwsjWhiteColor;
+            })
         }
         
         boxArray.forEach(boxStyling);
