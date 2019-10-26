@@ -121,12 +121,60 @@ document.addEventListener('DOMContentLoaded', function (event) {
 			})
 		}
 
-		const boxHeightArray = [];
+		const aboutSectionHeight = document.getElementById('about').offsetHeight;
+		const boxHeightArray = [200];
+		console.log(boxHeightArray);
 
 		const checkHeight = (item) => {
-			//add odległość
-					const boxHeight = item.offsetHeight;
-					boxHeightArray.push(boxHeight);
+			const nmbrBox = boxArray.indexOf(item);
+
+			//choose item
+			if (nmbrBox === 0) {
+				var x = 1;
+			} else {
+				var x = 1;
+			};
+
+			const correctNmbr = x;
+			const earlierBox = nmbrBox + correctNmbr - 1;			
+			const getEarlierDistance = boxHeightArray[earlierBox];
+			console.log(getEarlierDistance);
+						
+			//add distance
+			const boxHeight = item.offsetHeight;
+			const addedHeight = boxHeight + boxHeightArray[earlierBox];
+			console.log(addedHeight);
+
+			boxHeightArray.push(addedHeight);
+			console.log(boxHeightArray);
+	
+			//const getDistance = boxHeightArray
+		}
+
+		//Separate scroll for each box
+		const scrollBox = (item) => {
+			const allItems = item.children;
+			const arr = [];
+
+			const nmbr = boxArray.indexOf(item);
+			const height = boxHeightArray[nmbr] + aboutSectionHeight;
+
+			window.addEventListener("scroll", function () {
+
+				if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
+
+					[].forEach.call(allItems, function (item) {
+						arr.push(item);
+						const time = arr.length * 250;
+
+						setTimeout(function () {
+							item.style.animation = 'textSlider .5s ease-in';
+							item.style.visibility = 'visible';
+							return time;
+						}, 200 + time)
+					})
+				};
+			});
 		}
 
 		const runBox = () => {
@@ -134,34 +182,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
 			boxArray.forEach(createItems);
 			boxArray.forEach(fillItems);
 			boxArray.forEach(checkHeight);
+			boxArray.forEach(scrollBox);
 		}
 
-		runBox();	
+		runBox();
 
-		const scrollBox = () => {
-			window.addEventListener("scroll", function () {
-
-				if (document.body.scrollTop > (800) || document.documentElement.scrollTop > (800)) {
-					boxArray.forEach(function (item) {
-						const allItems = item.children;
-						const arr = [];
-
-						[].forEach.call(allItems, function (item) {
-							arr.push(item);
-							const time = arr.length*200;
-
-							setTimeout(function () {
-								item.style.animation = 'textSlider .5s ease-in';
-								item.style.visibility = 'visible';
-								return time;
-							}, 300+time)
-						})
-					})
-				};
-			});
-		}
-
-		scrollBox();
+		//scrollBox();
 	}
 
 	teamArray.forEach(createBox);
