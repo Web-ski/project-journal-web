@@ -10,24 +10,34 @@ document.addEventListener('DOMContentLoaded', function (event) {
         univ: 'University of Gdansk, Poland',
         descript: description,
         email: 'amodrzew@univ.gd',
-        image: 'images/Richie_McCaw.jpg'
+        image: 'images/Adam_Asanov.jpg'
     }
 
     const teamMember2 = {
         name: 'Roma Valentina',
         univ: 'University of Roma, Italy',
         descript: description,
-        email: 'rvalentia@univ.it'
+        email: 'rvalentia@univ.it',
+        image: 'images/Roma_Valentina.jpg'
     }
 
     const teamMember3 = {
         name: 'Richie McCaw',
         univ: 'University of Wellington, New Zealand',
         descript: description,
-        email: 'rvalentia@univ.it'
+        email: 'rmccaw@univ.nz',
+        image: 'images/Richie_McCaw.jpg'
     }
 
-    const teamArray = [teamMember1, teamMember2, teamMember3];
+    const teamMember4 = {
+        name: 'Ana Poghosian',
+        univ: 'University of Tbilisi, Georgia',
+        descript: description,
+        email: 'apoghosian@univ.ge',
+        image: 'images/Ana_Poghosian.jpg'
+    }
+
+    const teamArray = [teamMember1, teamMember2, teamMember3, teamMember4];
 
     const createBox = function() {
         const createElem = document.createElement('div');
@@ -52,9 +62,49 @@ document.addEventListener('DOMContentLoaded', function (event) {
             item.style.minHeight = '100px';
             item.style.marginTop = '15px';
             item.style.backgroundColor = $pwsjWhiteColor;
+            item.style.padding = '10px';
+        }
+
+        const createItems = function(item) {
+            const createImg = document.createElement('img');
+            const createName = document.createElement('p');
+            const createUniv = document.createElement('p');
+            const createDescript = document.createElement('p');
+            const createEmail = document.createElement('p');
+
+            item.appendChild(createImg);
+            item.appendChild(createName);
+            item.appendChild(createUniv);
+            item.appendChild(createDescript);
+            item.appendChild(createEmail);
+
+            item.children[0].setAttribute('class', 'article__image');
+            const prgrph = item.getElementsByTagName('p');
+
+            [].forEach.call(prgrph, function (item) {
+                item.setAttribute('class', 'item__text');
+            });
+        }
+
+        const fillItems = function(item) {
+            const itemIndex = boxArray.indexOf(item);
+
+            const image = item.getElementsByClassName('article__image')[0];
+            const imageSrc = teamArray[itemIndex].image;
+            image.setAttribute('src', imageSrc);
+            image.style.height = '100px';
+            image.style.display = 'flex';
+
+            const prgrph = item.getElementsByClassName('item__text');
+            prgrph[0].textContent = teamArray[itemIndex].name;
+            prgrph[1].textContent = teamArray[itemIndex].univ;
+            prgrph[2].textContent = teamArray[itemIndex].email;
+            prgrph[3].textContent = teamArray[itemIndex].descript;
         }
         
         boxArray.forEach(boxStyling);
+        boxArray.forEach(createItems);
+        boxArray.forEach(fillItems);
     }
     
     teamArray.forEach(createBox);

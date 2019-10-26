@@ -88,6 +88,13 @@ li {
   line-height: 150%;
 }
 
+.item__text {
+  color: #111111;
+  font-family: "Calibri", sans-serif;
+  line-height: 120%;
+  margin-bottom: 10px;
+}
+
 .warbonnets {
   width: 100%;
   position: relative;
