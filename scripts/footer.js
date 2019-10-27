@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 
-const footer = document.getElementsByClassName('footer')[0];
+	const footer = document.getElementsByClassName('footer')[0];
 
-const createElementsFooter = function () {
+	const createElementsFooter = function () {
 
-    const addInfoSection = document.createElement('section');
-    const addWebmasterSection = document.createElement('section');
-    
-    footer.appendChild(addInfoSection);
-    footer.appendChild(addWebmasterSection);
+		const addInfoSection = document.createElement('section');
+		const addWebmasterSection = document.createElement('section');
 
-    footer.firstElementChild.setAttribute('class', 'info');
-    footer.lastElementChild.setAttribute('class', 'webmaster');
+		footer.appendChild(addInfoSection);
+		footer.appendChild(addWebmasterSection);
 
-}
+		footer.firstElementChild.setAttribute('class', 'info');
+		footer.lastElementChild.setAttribute('class', 'webmaster');
 
-createElementsFooter();
+	}
+
+	createElementsFooter();
 
 });
