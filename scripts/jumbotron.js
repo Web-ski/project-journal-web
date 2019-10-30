@@ -2,56 +2,57 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 	const jumbotron = document.getElementsByClassName('jumbotron')[0];
 	const $pwsjBlackColor = '#111111';
+	const titlePartsArray = ['Project', 'Website', 'of', 'Science', 'Journal'];
 
 	const createElementsJumbotron = function () {
+
 		const addMapContainer = document.createElement('div');
-		const addPageTitle1 = document.createElement('h1');
-		const addPageTitle2 = document.createElement('h1');
-		const addPageTitle3 = document.createElement('h1');
-		const addPageTitle4 = document.createElement('h1');
-		const addPageTitle5 = document.createElement('h1');
-
-		const pageTitleText1 = document.createTextNode(" ");
-		const pageTitleText2 = document.createTextNode(" ");
-		const pageTitleText3 = document.createTextNode(" ");
-		const pageTitleText4 = document.createTextNode(" ");
-		const pageTitleText5 = document.createTextNode(" ");
 		jumbotron.appendChild(addMapContainer);
-		jumbotron.appendChild(addPageTitle1);
-		jumbotron.appendChild(addPageTitle2);
-		jumbotron.appendChild(addPageTitle3);
-		jumbotron.appendChild(addPageTitle4);
-		jumbotron.appendChild(addPageTitle5);
-		const pageTitleTextArray = [pageTitleText1, pageTitleText2, pageTitleText3, pageTitleText4, pageTitleText5];
+		
+		const pageTitleArray = [];
+		const pageTitleTextsArray = [];
 
-		jumbotron.firstElementChild.setAttribute('class', 'map-container');
-
-		const mapContainer = document.getElementsByClassName('map-container')[0];
-		mapContainer.style.position = 'absolute';
-		mapContainer.style.zIndex = '0';
-		mapContainer.style.width = '100%';
-		mapContainer.style.height = '100%';
-		mapContainer.style.top = '0';
-		mapContainer.style.backgroundImage = 'url(../images/map-of-europe-equidistant-hi.png)';
-		mapContainer.style.backgroundPosition = 'right bottom';
-		mapContainer.style.backgroundRepeat = 'no-repeat';
-		mapContainer.style.backgroundSize = '95%';
-
-		const jumbotronTitleAddClass = function () {
-			const jumbotronArray = document.getElementsByTagName('h1');
-
-			for (i = 0; i < jumbotronArray.length; i++) {
-				jumbotronArray[i].setAttribute('class', 'page-title');
-				jumbotronArray[i].appendChild(pageTitleTextArray[i]);
-				jumbotronArray[i].style.zIndex = '1';
-				jumbotronArray[i].style.marginLeft = '30px';
-				jumbotronArray[i].style.width = '200px';
-				jumbotronArray[i].style.textShadow = '0px 0px 15px' + $pwsjBlackColor;
-			}
-
-			jumbotronArray[2].style.textTransform = 'lowercase';
+		titlePartsArray.forEach(function () {
+			const addPageTitle = document.createElement('h1');
+			pageTitleArray.push(addPageTitle);
+			const addTitleText = document.createTextNode(" ");
+			pageTitleTextsArray.push(addTitleText);
+			jumbotron.appendChild(addPageTitle);
+		})
+		
+		const styleJumbotronMap = function () {
+			
+			jumbotron.firstElementChild.setAttribute('class', 'map-container');
+	
+			const mapContainer = document.getElementsByClassName('map-container')[0];
+			mapContainer.style.position = 'absolute';
+			mapContainer.style.zIndex = '0';
+			mapContainer.style.width = '100%';
+			mapContainer.style.height = '100%';
+			mapContainer.style.top = '0';
+			mapContainer.style.backgroundImage = 'url(../images/map-of-europe-equidistant-hi.png)';
+			mapContainer.style.backgroundPosition = 'right bottom';
+			mapContainer.style.backgroundRepeat = 'no-repeat';
+			mapContainer.style.backgroundSize = '95%';
 		}
 
+		const jumbotronTitleAddClass = function () {
+
+			console.log(pageTitleArray);
+
+			pageTitleArray.forEach(function (item) {
+				const nmbr = pageTitleArray.indexOf(item);
+				item.setAttribute('class', 'page-title');
+				item.appendChild(pageTitleTextsArray[nmbr]);
+				item.style.zIndex = '1';
+				item.style.marginLeft = '30px';
+				item.style.width = '200px';
+				item.style.textShadow = '0px 0px 15px' + $pwsjBlackColor;
+			})
+			pageTitleArray[2].style.textTransform = 'lowercase';
+		}
+
+		styleJumbotronMap();
 		jumbotronTitleAddClass();
 		//console.log(jumbotronArray);
 	}
