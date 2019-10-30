@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 		const aboutSectionHeight = document.getElementById('about').offsetHeight;
 		const boxHeightArray = [200];
-		console.log(boxHeightArray);
+		//console.log(boxHeightArray);
 
 		const checkHeight = (item) => {
 			const nmbrBox = boxArray.indexOf(item);
@@ -136,18 +136,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
 			};
 
 			const correctNmbr = x;
-			const earlierBox = nmbrBox + correctNmbr - 1;			
+			const earlierBox = nmbrBox + correctNmbr - 1;
 			const getEarlierDistance = boxHeightArray[earlierBox];
-			console.log(getEarlierDistance);
-						
+			//console.log(getEarlierDistance);
+
 			//add distance
 			const boxHeight = item.offsetHeight;
 			const addedHeight = boxHeight + boxHeightArray[earlierBox];
-			console.log(addedHeight);
+			//console.log(addedHeight);
 
 			boxHeightArray.push(addedHeight);
-			console.log(boxHeightArray);
-	
+			//console.log(boxHeightArray);
 			//const getDistance = boxHeightArray
 		}
 
