@@ -169,13 +169,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
 						elem1.style.width = '100%';
 						elem1.style.top = '0';
 						elem1.style.left = '0';
-	
+
 						for (let i = 0; i < 2; i++) {
 							setTimeout(function () {
 								elem1.style.top = i + 'px';
 							}, i * 8);
 						};
-	
+
 					}, 300);
 
 				}, 300);
