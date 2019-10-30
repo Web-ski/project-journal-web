@@ -193,7 +193,7 @@ li {
 }
 
 .footer {
-  background-color: #204A87;
+  background-color: #111111;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,6 +203,24 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 25px;
+}
+
+.footer .info, .footer .web {
+  padding: 15px 25px;
+}
+
+.footer .info ul li, .footer .web ul li {
+  color: #FFFFFF;
+  line-height: 140%;
+}
+
+.footer .web {
+  color: #919191;
+}
+
+.footer .web ul li {
+  color: inherit;
 }
 
 /*Pages*/

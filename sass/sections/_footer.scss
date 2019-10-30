@@ -1,6 +1,29 @@
 .footer {
-    background-color: $pwsj-map-color;
+    background-color: $pwsj-black-color;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    padding-bottom: 25px;
+
+    .info {
+        padding: 15px 25px;
+
+        ul {
+            li {
+                color: $pwsj-white-color;
+                line-height: 140%;
+            }
+        }
+    }
+
+    .web {
+        @extend .info;
+        color: $pwsj-gray-color;
+
+        ul {
+            li {
+                color: inherit;
+            }
+        }
+    }
 }

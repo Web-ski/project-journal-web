@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 		for(let i = 0; i < listElems.length; i++) {
 			listElems[i].textContent = arr[i];
+			listElems[i].setAttribute('class', 'item__text');
 		}
 	}
 
