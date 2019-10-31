@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 		const addMapContainer = document.createElement('div');
 		jumbotron.appendChild(addMapContainer);
-		
+
 		const pageTitleArray = [];
 		const pageTitleTextsArray = [];
 
@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
 			pageTitleTextsArray.push(addTitleText);
 			jumbotron.appendChild(addPageTitle);
 		})
-		
+
 		const styleJumbotronMap = function () {
-			
+
 			jumbotron.firstElementChild.setAttribute('class', 'map-container');
-	
+
 			const mapContainer = document.getElementsByClassName('map-container')[0];
 			mapContainer.style.position = 'absolute';
 			mapContainer.style.zIndex = '0';
@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		}
 
 		const jumbotronTitleAddClass = function () {
-
-			console.log(pageTitleArray);
 
 			pageTitleArray.forEach(function (item) {
 				const nmbr = pageTitleArray.indexOf(item);
@@ -59,6 +57,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 	const pulsePageTitle = function () {
 		const pageTitleAll = document.getElementsByClassName('page-title');
+
+		[].forEach.call(pageTitleAll, function (item) {
+			item.childNodes[0];
+			console.log(item.childNodes[0]);
+		})
+
+		//Co tu ?????? Tablica dla nodów? Potrzebna? Tablica dla 'długości treści'
 		const pageTitlePlace1 = pageTitleAll[0].childNodes[0];
 		const pageTitlePlace2 = pageTitleAll[1].childNodes[0];
 		const pageTitlePlace3 = pageTitleAll[2].childNodes[0];
@@ -74,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		const time = [pageTitlePart1.length, pageTitlePart2.length, pageTitlePart3.length, pageTitlePart4.length];
 
 		const pulse = function () {
+			console.log('JAA' + pageTitleTextsArray);
+
 			const time = [pageTitlePart1.length, pageTitlePart2.length, pageTitlePart3.length, pageTitlePart4.length];
 			const time1 = time[0];
 			const time2 = time1 + time[1];
