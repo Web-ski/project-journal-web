@@ -2,11 +2,15 @@
 	position: absolute;
 	height: 70px;
 	width: 100%;
+	min-width: 300px;
+	max-width: 1300px;	
+	//background-color: $pwsj-black-color;
 	top: 0;
 	left: 0;
 	padding: 0 30px;
 	display: flex;
 	justify-content: space-between;
+	z-index: 99;
 
 	.brand-container {
 		position: relative;

@@ -1,11 +1,11 @@
 .jumbotron {
-    height: 65vh;
+    height: 62vh;
     width: 100%;
     position: relative;
     padding-top: calc(35% + 5vh);
 
     @media screen and (min-width: $pwsj-min-sm) {
-        padding-top: calc(20vh);
+        padding-top: calc(15vh);
     }
 }
 

@@ -9,11 +9,26 @@ html {
     font-size: 16px;
 }
 
+body {
+    background-color: $pwsj-darkGray-color;
+    background-image: linear-gradient(to right, $pwsj-map-color, black, black, black, black, black, $pwsj-map-color);
+}
+
 a {
     text-decoration: none;
 }
 
-
 li {
     list-style: none;
+}
+
+.wrapper {
+    min-width: 300px;
+    max-width: 1300px;
+    margin: auto;
+    position: relative;
+}
+
+.section {
+    background-color: $pwsj-black-color;
 }

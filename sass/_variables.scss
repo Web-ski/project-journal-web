@@ -5,6 +5,7 @@ $pwsj-black-color: #111111;
 $pwsj-white-color: #FFFFFF;
 $pwsj-prgraph-color: #111111;
 $pwsj-gray-color: #919191;
+$pwsj-darkGray-color: #181818;
 
 /*Fonts*/
 $pwsj-prgraph-font: 'Calibri',
@@ -21,6 +22,7 @@ $pwsj-border-radius: 3px;
 $pwsj-max-xs: 575.99px;
 $pwsj-min-sm: 576px;
 $pwsj-min-md: 768px;
+$pwsj-min-xl: 1200px;
 
 
 /*Extends*/
@@ -31,6 +33,6 @@ $pwsj-min-md: 768px;
 }
 
 @mixin pwsj-dark-theme {
-    background-color: $pwsj-black-color;
+    //background-color: $pwsj-black-color;
     color: $pwsj-white-color;
 }

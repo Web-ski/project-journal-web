@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 				const screenTester = function () {
 					if (smartView.matches) {
-						mapContainer.style.backgroundSize = '95%';
+						mapContainer.style.backgroundSize = '90%';
 					} else if (startTabletView.matches && endTabletView.matches) {
-						mapContainer.style.backgroundSize = '80%';
+						mapContainer.style.backgroundSize = '75%';
 					} else {
-						mapContainer.style.backgroundSize = '58vh';
+						mapContainer.style.backgroundSize = '55vh';
 					}
 				}
 				screenTester();
@@ -70,12 +70,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
 						if (smartView.matches) {
 							item.style.marginLeft = '30px';
 						} else {
-							item.style.marginLeft = '18vw';
+							item.style.marginLeft = '10vw';
 						}
 					}
 					screenTester();
 				})
-				
+
 				pageTitleArray[2].style.textTransform = 'lowercase';
 			}
 
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	//funkcja testująca viewPort
 	const jumbotronScreenTester1 = function (view) {
 		if (view.matches) {
-			mapContainerSize.style.backgroundSize = '95%';
+			mapContainerSize.style.backgroundSize = '90%';
 			[].forEach.call(jumbTitleMargin, function (item) {
 				item.style.marginLeft = '30px';
 			})
@@ -170,20 +170,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		if (view.matches) {
 			mapContainerSize.style.backgroundSize = '80%';
 			[].forEach.call(jumbTitleMargin, function (item) {
-				item.style.marginLeft = '18vw';
+				item.style.marginLeft = '10vw';
 			})
 		}
 	}
 
 	const jumbotronScreenTester3 = function (view) {
 		if (view.matches) {
-			mapContainerSize.style.backgroundSize = '80%';
+			mapContainerSize.style.backgroundSize = '75%';
 		}
 	}
 
 	const jumbotronScreenTester4 = function (view) {
 		if (view.matches) {
-			mapContainerSize.style.backgroundSize = '58vh';
+			mapContainerSize.style.backgroundSize = '55vh';
 		}
 	}
 

@@ -15,12 +15,29 @@ html {
   font-size: 16px;
 }
 
+body {
+  background-color: #181818;
+  background-image: -webkit-gradient(linear, left top, right top, from(#204A87), color-stop(black), color-stop(black), color-stop(black), color-stop(black), color-stop(black), to(#204A87));
+  background-image: linear-gradient(to right, #204A87, black, black, black, black, black, #204A87);
+}
+
 a {
   text-decoration: none;
 }
 
 li {
   list-style: none;
+}
+
+.wrapper {
+  min-width: 300px;
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+}
+
+.section {
+  background-color: #111111;
 }
 
 /* Components */
@@ -42,7 +59,7 @@ li {
 }
 
 .button-container {
-  height: 30%;
+  height: 27%;
   width: 100%;
   padding: 8px 0;
   font-size: 0;
@@ -127,7 +144,6 @@ li {
 
 /* Sections */
 .main {
-  background-color: #111111;
   color: #FFFFFF;
   min-height: 100vh;
   width: 100%;
@@ -138,6 +154,8 @@ li {
   position: absolute;
   height: 70px;
   width: 100%;
+  min-width: 300px;
+  max-width: 1300px;
   top: 0;
   left: 0;
   padding: 0 30px;
@@ -147,6 +165,7 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 99;
 }
 
 .navbar .brand-container, .navbar .hmbr-container {
@@ -194,7 +213,7 @@ li {
 }
 
 .footer {
-  background-color: #111111;
+  background-color: #181818;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,6 +224,7 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .footer .info, .footer .web {
@@ -227,7 +247,7 @@ li {
 /*Pages*/
 /*1*/
 .jumbotron {
-  height: 65vh;
+  height: 62vh;
   width: 100%;
   position: relative;
   padding-top: calc(35% + 5vh);
@@ -235,7 +255,7 @@ li {
 
 @media screen and (min-width: 576px) {
   .jumbotron {
-    padding-top: calc(20vh);
+    padding-top: calc(15vh);
   }
 }
 
@@ -245,7 +265,7 @@ $pwsj-min-sm: 'min-width: 576px';
 $pwsj-min-md: 'min-width: 768px';
 */
 .crossroad {
-  height: 35vh;
+  height: 38vh;
 }
 
 #about {
