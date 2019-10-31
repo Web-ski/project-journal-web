@@ -3,4 +3,14 @@
     width: 100%;
     position: relative;
     padding-top: calc(35% + 5vh);
+
+    @media screen and (min-width: $pwsj-min-sm) {
+        padding-top: calc(20vh);
+    }
 }
+
+/*
+$pwsj-max-xs: 'max-width: 575.99px';
+$pwsj-min-sm: 'min-width: 576px';
+$pwsj-min-md: 'min-width: 768px';
+*/

@@ -17,6 +17,12 @@ sans-serif;
 /*Border*/
 $pwsj-border-radius: 3px;
 
+/*Breakepoints*/
+$pwsj-max-xs: 575.99px;
+$pwsj-min-sm: 576px;
+$pwsj-min-md: 768px;
+
+
 /*Extends*/
 
 @mixin pwsj-btn-text {
