@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 		const addMapContainer = document.createElement('div');
 		jumbotron.appendChild(addMapContainer);
-		
+
 		const pageTitleArray = [];
 		const pageTitleTextsArray = [];
 
@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
 			pageTitleTextsArray.push(addTitleText);
 			jumbotron.appendChild(addPageTitle);
 		})
-		
+
 		const styleJumbotronMap = function () {
-			
+
 			jumbotron.firstElementChild.setAttribute('class', 'map-container');
-	
+
 			const mapContainer = document.getElementsByClassName('map-container')[0];
 			mapContainer.style.position = 'absolute';
 			mapContainer.style.zIndex = '0';
@@ -38,8 +38,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 		const jumbotronTitleAddClass = function () {
 
-			console.log(pageTitleArray);
-
 			pageTitleArray.forEach(function (item) {
 				const nmbr = pageTitleArray.indexOf(item);
 				item.setAttribute('class', 'page-title');
@@ -53,69 +51,66 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		}
 
 		styleJumbotronMap();
-		jumbotronTitleAddClass();
-		//console.log(jumbotronArray);
+		jumbotronTitleAddClass();		
 	}
 
 	const pulsePageTitle = function () {
 		const pageTitleAll = document.getElementsByClassName('page-title');
-		const pageTitlePlace1 = pageTitleAll[0].childNodes[0];
-		const pageTitlePlace2 = pageTitleAll[1].childNodes[0];
-		const pageTitlePlace3 = pageTitleAll[2].childNodes[0];
-		const pageTitlePlace4 = pageTitleAll[3].childNodes[0];
-		const pageTitlePlace5 = pageTitleAll[4].childNodes[0];
-		const pageTitlePart1 = 'Project';
-		const pageTitlePart2 = 'Website';
-		const pageTitlePart3 = 'of';
-		const pageTitlePart4 = 'Science';
-		const pageTitlePart5 = 'Journal';
 
-		//console.log(pageTitleAll);
-		const time = [pageTitlePart1.length, pageTitlePart2.length, pageTitlePart3.length, pageTitlePart4.length];
+		const pageTitlePlaceArray = [];
+
+		[].forEach.call(pageTitleAll, function (item) {
+			const place = item.childNodes[0];
+			pageTitlePlaceArray.push(place);
+		})
+
+		const text1 = titlePartsArray[0];
+		const text2 = titlePartsArray[1];
+		const text3 = titlePartsArray[2];
+		const text4 = titlePartsArray[3];
+		const text5 = titlePartsArray[4];
 
 		const pulse = function () {
-			const time = [pageTitlePart1.length, pageTitlePart2.length, pageTitlePart3.length, pageTitlePart4.length];
+			const time = [titlePartsArray[0].length, titlePartsArray[1].length, titlePartsArray[2].length, titlePartsArray[3].length];
 			const time1 = time[0];
 			const time2 = time1 + time[1];
 			const time3 = time2 + time[2];
 			const time4 = time3 + time[3];
 
-			for (let i = 0; i < pageTitlePart1.length; i++) {
+			for (let i = 0; i < time[0]; i++) {
 				setTimeout(function () {
-					pageTitlePlace1.textContent += pageTitlePart1[i];
+					pageTitlePlaceArray[0].textContent += text1[i];
 				}, i * 50);
 			}
 
 			setTimeout(function () {
-				for (let i = 0; i < pageTitlePart2.length; i++) {
+				for (let i = 0; i < time[1]; i++) {
 					setTimeout(function () {
-						pageTitlePlace2.textContent += pageTitlePart2[i];
+						pageTitlePlaceArray[1].textContent += text2[i];
 					}, i * 50);
 				}
 			}, 50 * time1);
 
 			setTimeout(function () {
-				for (let i = 0; i < pageTitlePart3.length; i++) {
+				for (let i = 0; i < time[2]; i++) {
 					setTimeout(function () {
-						pageTitlePlace3.textContent += pageTitlePart3[i];
+						pageTitlePlaceArray[2].textContent += text3[i];
 					}, i * 50);
 				}
-				const time = pageTitlePart1.length + pageTitlePart2.length;
 			}, 50 * time2);
 
 			setTimeout(function () {
-				for (let i = 0; i < pageTitlePart4.length; i++) {
+				for (let i = 0; i < time[3]; i++) {
 					setTimeout(function () {
-						pageTitlePlace4.textContent += pageTitlePart4[i];
+						pageTitlePlaceArray[3].textContent += text4[i];
 					}, i * 50);
 				}
-
 			}, 50 * time3);
 
 			setTimeout(function () {
-				for (let i = 0; i < pageTitlePart5.length; i++) {
+				for (let i = 0; i < titlePartsArray[4].length; i++) {
 					setTimeout(function () {
-						pageTitlePlace5.textContent += pageTitlePart5[i];
+						pageTitlePlaceArray[4].textContent += text5[i];
 					}, i * 50);
 				}
 			}, 50 * time4);
