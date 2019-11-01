@@ -17,8 +17,6 @@ html {
 
 body {
   background-color: #181818;
-  background-image: -webkit-gradient(linear, left top, right top, from(#204A87), color-stop(black), color-stop(black), color-stop(black), color-stop(black), color-stop(black), to(#204A87));
-  background-image: linear-gradient(to right, #204A87, black, black, black, black, black, #204A87);
 }
 
 a {
@@ -46,6 +44,12 @@ li {
   font-size: calc(22px + 2vw);
   text-transform: uppercase;
   position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-title {
+    font-size: 45px;
+  }
 }
 
 .section__title {

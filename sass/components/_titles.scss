@@ -3,6 +3,10 @@
     font-size: calc(22px + 2vw);
     text-transform: uppercase;
     position: relative;
+
+    @media screen and (min-width: $pwsj-min-xl) {
+        font-size: 45px;
+    }
 }
 
 .section__title {
