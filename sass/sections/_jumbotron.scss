@@ -7,6 +7,10 @@
     @media screen and (min-width: $pwsj-min-sm) {
         padding-top: calc(15vh);
     }
+
+    @media screen and (min-width: $pwsj-min-xl) {
+        height: 68vh;
+    }
 }
 
 /*

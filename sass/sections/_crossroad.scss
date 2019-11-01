@@ -6,4 +6,10 @@
         justify-content: space-around;
         align-items: center;
     }
+
+    @media screen and (min-width: $pwsj-min-xl) {
+        height: 32vh;
+        //padding-top: 10px;
+        align-items: center;
+    }
 }
