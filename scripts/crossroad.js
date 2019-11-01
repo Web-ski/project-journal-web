@@ -80,18 +80,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		};
 
 		const createButtons = function () {
-			const addButton1 = document.createElement('button');
-			buttonFrame[0].appendChild(addButton1);
-			buttonFrame[0].firstChild.setAttribute('class', 'button-go');
-			buttonFrame[0].setAttribute('href', '#');
-			const addButton2 = document.createElement('button');
-			buttonFrame[1].appendChild(addButton2);
-			buttonFrame[1].firstChild.setAttribute('class', 'button-go');
-			buttonFrame[1].setAttribute('href', '#');
-			const addButton3 = document.createElement('button');
-			buttonFrame[2].appendChild(addButton3);
-			buttonFrame[2].firstChild.setAttribute('class', 'button-go');
-			buttonFrame[2].setAttribute('href', '#about');
+			
+			[].forEach.call(buttonFrame, function(item) {
+				const button = document.createElement('button');
+				item.appendChild(button);
+				item.firstChild.setAttribute('class', 'button-go');
+				item.setAttribute('href', '#');				
+			})
 		};
 
 		const addButtons = function () {
