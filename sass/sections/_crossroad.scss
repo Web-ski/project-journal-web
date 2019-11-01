@@ -1,3 +1,9 @@
 .crossroad {
     height: 38vh;
+
+    @media screen and (min-width: $pwsj-min-md) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
