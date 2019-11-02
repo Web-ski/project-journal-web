@@ -80,12 +80,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		};
 
 		const createButtons = function () {
-			
-			[].forEach.call(buttonFrame, function(item) {
+
+			[].forEach.call(buttonFrame, function (item, index) {
 				const button = document.createElement('button');
 				item.appendChild(button);
 				item.firstChild.setAttribute('class', 'button-go');
-				item.setAttribute('href', '#');				
+				if (index === 2) {
+					item.setAttribute('href', '#about');
+				} else {
+					item.setAttribute('href', '#');
+				}
 			})
 		};
 
