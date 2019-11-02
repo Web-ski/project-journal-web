@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 						if (smartView.matches) {
 							item.style.marginLeft = '30px';
 						} else {
-							item.style.marginLeft = '10vw';
+							item.style.marginLeft = '15vw';
 						}
 					}
 					screenTester();
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		if (view.matches) {
 			mapContainerSize.style.backgroundSize = '80%';
 			[].forEach.call(jumbTitleMargin, function (item) {
-				item.style.marginLeft = '10vw';
+				item.style.marginLeft = '15vw';
 			})
 		}
 	}

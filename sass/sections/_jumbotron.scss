@@ -5,8 +5,12 @@
     padding-top: calc(35% + 5vh);
 
     @media screen and (min-width: $pwsj-min-sm) {
-        padding-top: calc(15vh);
+        padding-top: 20vh;
     }
+
+    @media screen and (min-width: $pwsj-min-md) {
+		padding-top: 25vh;
+	}
 
     @media screen and (min-width: $pwsj-min-xl) {
         height: 68vh;
