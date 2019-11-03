@@ -367,6 +367,35 @@ $pwsj-min-md: 'min-width: 768px';
   }
 }
 
+@media screen and (min-width: 768px) {
+  #about .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #about .content .container {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    padding-right: 10px;
+    text-align: justify;
+  }
+  #about .content .container:last-of-type {
+    -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+            flex: 1.5;
+    padding-left: 20px;
+    padding-right: 0px;
+    text-align: center;
+  }
+}
+
 /*2*/
 /*3*/
 /*# sourceMappingURL=style.css.map */

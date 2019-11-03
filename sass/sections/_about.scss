@@ -21,6 +21,26 @@
 			100% {
 				opacity: 0;
 			}
-		}		
+		}
+
+		@media screen and (min-width: $pwsj-min-md) {
+
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			.container {
+				flex: 2;
+				padding-right: 10px;
+				text-align: justify;
+
+				&:last-of-type {
+					flex: 1.5;
+					padding-left: 20px;
+					padding-right: 0px;
+					text-align: center;
+				}
+			}
+		}
 	}
 }

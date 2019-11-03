@@ -4,26 +4,33 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	const $pwsjBlackColor = '#111111';
 
 	const aboutContent = document.getElementsByClassName('content')[0];
-	const text1 = aboutContent.firstElementChild;
-	const text2 = aboutContent.children[1];
-	const title = aboutContent.children[2];
-	const img = aboutContent.children[3];
-	const text3 = aboutContent.children[4];
-	const text4 = aboutContent.children[5];
-	const text5 = aboutContent.children[6];
-
+	const container = aboutContent.getElementsByClassName('container');
+	const text1 = container[0].firstElementChild;
+	const text2 = container[0].children[1];
+	const title = container[1].firstElementChild;
+	const img = container[1].children[1];
+	const text3 = container[1].children[2];
+	const text4 = container[1].children[3];
+	const text5 = container[1].children[4];
+	
 	const stylingTexts = function () {
-		const contElemsArr = aboutContent.children;
+		const contElemsArr1 = container[0].children;
+		const contElemsArr2 = container[1].children;
+		
 		img.style.height = '100px';
 		img.style.display = 'block';
-		img.style.margin = '0 auto';
+		img.style.margin = '5px auto';
 		img.style.border = 'solid 10px' + $pwsjBlueColor;
 		img.style.borderRadius = '50%';
 		img.style.backgroundColor = $pwsjBlackColor;
 		title.style.color = '#919191';
-		title.style.paddingTop = '15px';
 
-		[].forEach.call(contElemsArr, function (item) {
+		[].forEach.call(contElemsArr1, function (item) {
+			item.style.opacity = "0";
+			item.style.marginBottom = "15px";
+		});
+
+		[].forEach.call(contElemsArr2, function (item) {
 			item.style.opacity = "0";
 			item.style.marginBottom = "15px";
 		});
