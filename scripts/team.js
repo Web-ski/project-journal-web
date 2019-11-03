@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 	const teamContent = document.getElementsByClassName('content')[1];
+	const endTabletView = window.matchMedia('(max-width: 767.99px)');
 
 	const $pwsjWhiteColor = '#FFFFFF';
 	const $pwsjBlueColor = '#297cf1';
@@ -59,15 +60,27 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		});
 
 		const boxStyling = function (item) {
-			item.style.width = '100%';
 			item.style.height = 'auto';
 			item.style.overflow = 'hidden';
 			//item.style.minHeight = '100px';
-			item.style.marginBottom = '25px';
+			//item.style.maxWidth = '400px';
 			item.style.backgroundColor = $pwsjBlueColor;
 			item.style.border = 'solid 4px' + $pwsjBlueColor;
 			item.style.padding = '15px';
 			item.style.borderRadius = '3px';
+			item.style.float = 'left';
+
+			const screenTester = function () {
+				if (endTabletView.matches) {
+					item.style.width = '100%';
+					item.style.margin = '0 auto';
+					item.style.marginBottom = '25px';
+				} else {
+					item.style.width = '46%';
+					item.style.margin = '0 2% 25px 2%';
+				}
+			}
+			screenTester();
 		}
 
 		const createItems = function (item) {
@@ -191,4 +204,23 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 	teamArray.forEach(createBox);
 	addBoxElements();
+
+	const teamItem = teamContent.getElementsByClassName('item__box');
+
+	const teamScreenTester = function (view) {
+		if (view.matches) {
+			[].forEach.call(teamItem, function (item) {
+				item.style.width = '100%';
+				item.style.margin = '0 auto';
+				item.style.marginBottom = '25px';
+			})
+		} else {
+			[].forEach.call(teamItem, function (item) {
+				item.style.width = '46%';
+				item.style.margin = '0 2% 25px 2%';
+			})
+		}
+	}
+
+	endTabletView.addListener(teamScreenTester);
 });
